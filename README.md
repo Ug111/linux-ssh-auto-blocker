@@ -39,7 +39,14 @@ The script parses authentication logs (/var/log/auth.log), identifies repeated f
 This project demonstrates practical SOC-level defensive security skills including log analysis, threat detection, and automated response.
 
 ## Detection Logic 
-The script monitors 'var/log/auth.log' and counts repeated failed SSH login attempts from the same IP address.
+The script monitors 'var/log/auth.log' and counts repeated 
+
+## 🚀 How to Use
+ Clone the repo:
+   ```bash
+   git clone https://github.com/Ug111/linux-ssh-auto-blocker.git
+   cd linux-ssh-auto-blockerailed SSH login attempts from the same IP address.
+
 if an IP exceeds a predefined threshold (e.g., 5 failed attempts), the script automatically blocks the IP using UFW firewall rules.
 
 ## Example Detection Output
