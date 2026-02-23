@@ -1,4 +1,13 @@
-# Linux SSH Auto Blocker (Intrusion Prevention System)
+#!/bin/bash
+
+# ==================================================
+# SSH Auto Blocker - Intrusion Prevention Script
+# Author: Ug111
+# Description:
+# Monitors SSH authentication logs and automatically
+# blocks IP addresses that exceed failed login threshold.
+# Environment: Ubuntu Linux
+# ==================================================
 
 ## Overview
 This project is a lightweight intrusion detection and prevention script designed to monitor SSH authentication logs and automatically block brute-force attackers using firewall rules.
