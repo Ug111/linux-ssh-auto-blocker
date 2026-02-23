@@ -29,6 +29,19 @@ The script parses authentication logs (/var/log/auth.log), identifies repeated f
 ## Use Case
 This project demonstrates practical SOC-level defensive security skills including log analysis, threat detection, and automated response.
 
----
+## Detection Logic 
+The script monitors 'var/log/auth.log' and counts repeated failed SSH login attempts from the same IP address.
+if an IP exceeds a predefined threshold (e.g., 5 failed attempts), the script automatically blocks the IP using UFW firewall rules.
+
+## Example Detection Output
+[2026-02-22 04:10:11] BLOCKED: 192.168.1.100 - 21 failed attempts
+
+Firewall Rule Applied
+DROP tcp -- 192.168.1.100 0.0.0.0/0 tcp dpt:22
+
+## Limitations 
+- Designed for Ubuntu-based systems
+- Requires UFW or iptables enabled
+- Intended for educational and lab environments
 
 Author: Ug111
